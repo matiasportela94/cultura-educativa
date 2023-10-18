@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~font-awesome/css/font-awesome.css';
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url(./assets/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: local("RobotoCondensed"), url(./assets/fonts/roboto-condensed/RobotoCondensed-Regular.ttf) format("truetype");
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+}

@@ -1,0 +1,124 @@
+$verde: #8FC88A;
+$negro: #000000;
+$blanco: #FFFFFF;
+
+.landing-container {
+    height: auto;
+    width: 100vw;
+
+    .header-container {
+        height: 85vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url('/assets/images/textura.jpg');
+        background-repeat: no-repeat;
+        background-position: center; 
+
+        .conexiones-image-container{
+            img {
+                height: 60vh;
+                position: relative;
+                padding-left: 7vw;
+                margin-top: 2vw;
+            }
+        }
+
+        .logo-image-container {
+            img {
+                height: 40vh;
+            }
+        }
+    }
+
+    .quienes-somos-container {
+        height: 80vh;
+        width: 100vw;
+        background-color: $verde;
+        display: flex;
+        flex-direction: row;
+        
+        .quienes-somos {
+            display: flex;
+            flex-direction: column;
+            padding: 10vh 10vw;
+            width: 70%;
+
+            .texto-container {
+                margin-top: 5vh;
+
+                p {
+                    font-size: 20px;
+
+                    .palabra-clave {
+                        font-weight: 700;
+                    }
+                }
+
+                h3 {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .mapa {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .landing-container {
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .conexiones-image-container{
+                display: none;
+            }
+    
+            .logo-image-container {
+                margin: auto;
+                img {
+                    height: 40vh;
+                }
+            }
+        }
+    
+        .quienes-somos-container {
+            height: 100%;
+            width: 100vw;
+            flex-direction: column;
+            
+            .quienes-somos {
+                width: 100%;
+    
+                .texto-container {
+                    margin-top: 5vh;
+    
+                    p {
+                        font-size: 20px;
+    
+                        .palabra-clave {
+                            font-weight: 700;
+                        }
+                    }
+    
+                    h3 {
+                        font-weight: 700;
+                    }
+                }
+            }
+    
+            .mapa {
+                width: 0%;
+                display: none;
+            }
+        }
+    }
+
+}

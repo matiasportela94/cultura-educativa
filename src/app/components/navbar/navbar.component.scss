@@ -1,0 +1,58 @@
+$verde: #8FC88A;
+$negro: #000000;
+$blanco: #FFFFFF;
+
+#navigation {
+  background-image: url('/assets/images/textura.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  .container-fluid {
+    .collapse {
+      ul {
+        li {
+          border: $negro solid 3px;
+          border-radius: 30px;
+          background-color: $blanco;
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+          margin: 1vh 0;
+          width: 95%;
+
+          a {
+            .seccion {
+              font-weight: 700;
+            }
+          }
+        }
+
+        li:hover {
+          background-color: $verde;
+
+          .seccion {
+            color: $blanco;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    .container-fluid {
+      .collapse {
+        justify-content: center;
+        ul {
+          li {
+            margin: 0 2vw;
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}

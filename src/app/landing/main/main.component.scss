@@ -1,0 +1,30 @@
+$verde: #8FC88A;
+$negro: #000000;
+$blanco: #FFFFFF;
+
+.btnWsp {
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background: $verde;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  font-size: 25px;
+  padding-top: 4px;
+
+  .icono{
+    width: 50px;
+  }
+}
+
+.btnWsp:hover {
+  text-decoration: none;
+  color: $verde;
+  background: white;
+}
