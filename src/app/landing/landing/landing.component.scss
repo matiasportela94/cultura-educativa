@@ -1,42 +1,63 @@
 $verde: #8FC88A;
 $negro: #000000;
-$blanco: #FFFFFF;
+$blanco: #F3F3F3;
+
+$telefono:"576px";
+$tablet:"1070px";
 
 .landing-container {
     height: auto;
-    width: 100vw;
-
+    width: 100%;
+    max-width: 100%;
+    
     .header-container {
         height: 85vh;
-        width: 100vw;
-        position: relative;
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         background-image: url('/assets/images/textura.jpg');
         background-repeat: no-repeat;
         background-position: center; 
 
+        .header-element{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .conexiones-image-container{
             img {
                 height: 60vh;
-                position: relative;
-                padding-left: 7vw;
-                margin-top: 2vw;
             }
         }
 
         .logo-image-container {
+            width: 20%;
+
             img {
                 height: 40vh;
             }
         }
+
+    }
+
+    .banner-cultura {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+        padding-top: 5vh;
+        background-color: $verde;
     }
 
     .quienes-somos-container {
         height: 80vh;
-        width: 100vw;
-        background-color: $verde;
+        width: 100%;
+        background-color: $blanco;
         display: flex;
         flex-direction: row;
         
@@ -45,6 +66,7 @@ $blanco: #FFFFFF;
             flex-direction: column;
             padding: 10vh 10vw;
             width: 70%;
+            height: 100%;
 
             .texto-container {
                 margin-top: 5vh;
@@ -69,7 +91,7 @@ $blanco: #FFFFFF;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $tablet) {
 
     .landing-container {
         .header-container {
@@ -82,16 +104,29 @@ $blanco: #FFFFFF;
             }
     
             .logo-image-container {
-                margin: auto;
                 img {
                     height: 40vh;
                 }
+            }
+
+            .thirdColumn{
+                display: none;
+            }
+        }
+
+        .banner-cultura {
+            padding-top: 0;
+            height: 70vh;
+
+            img{
+                width: 100%;
+                height: auto;
             }
         }
     
         .quienes-somos-container {
             height: 100%;
-            width: 100vw;
+            width: 100%;
             flex-direction: column;
             
             .quienes-somos {
@@ -120,5 +155,5 @@ $blanco: #FFFFFF;
             }
         }
     }
-
+    
 }

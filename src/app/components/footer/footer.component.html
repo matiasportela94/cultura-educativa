@@ -1,3 +1,40 @@
-<div class="footer">
-    
+<div id="footer" class="footer">
+    <div class="contacto">
+        <div class="text">
+            <h4>HORARIOS DE ATENCION:</h4>
+            <p>Lunes a Viernes de 10 a 18hs.</p>
+            <p>Sabados de 09 a 14hs.</p>
+        </div>
+        <div class="links">
+            <div class="link">
+                <div class="iconoContainer">
+                    <i class="fa fa-phone icono"></i>
+                </div>
+                <div class="infoContainer">
+                    <span class="contactoInfo"><p>+549-2235-988854</p></span>
+                </div>
+            </div>
+
+            <div class="link">
+                <div class="iconoContainer">
+                   <i class="fa fa-envelope icono"></i>
+                </div>
+                <div class="infoContainer">
+                    <span class="contactoInfo"><p>ce.culturaeducativa@gmail.com</p></span>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="linkIcons">
+        <div class="phone circulo">
+            <img src="{{phoneIconPath}}" [cdkCopyToClipboard]="getPhoneNumber()">
+        </div>
+        <div class="mail circulo">
+            <img src="{{mailIconPath}}" [cdkCopyToClipboard]="getContactMail()">
+        </div>
+    </div>
+    <div class="atencionAlCliente">
+        <img src="{{ atencionAlClientePath }}" alt="">
+    </div>
 </div>

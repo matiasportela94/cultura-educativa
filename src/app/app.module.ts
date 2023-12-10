@@ -8,6 +8,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './landing/landing/landing.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DiplomaturaComponent } from './landing/diplomatura/diplomatura.component';
+import { ActualizacionesComponent } from './landing/actualizaciones/actualizaciones.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MainComponent,
     NavbarComponent,
     FooterComponent,
-    LandingComponent
+    LandingComponent,
+    DiplomaturaComponent,
+    ActualizacionesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

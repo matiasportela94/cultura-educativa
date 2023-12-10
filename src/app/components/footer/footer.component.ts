@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'footer',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  atencionAlClientePath = "/assets/images/atencionAlCliente.svg"
+  phoneIconPath= "/assets/images/icons/phone.svg";
+  mailIconPath= "/assets/images/icons/mail.svg";
+
+  phoneNumber:string = "+5492235988854";
+  contactMail:string = "ce.culturaeducativa@gmail.com";
+
+  constructor(private clipboard: Clipboard) { }
 
   ngOnInit(): void {
+  }
+
+  getPhoneNumber(): string {
+    return this.phoneNumber;
+  }
+
+  getContactMail(): string {
+    return this.contactMail;
   }
 
 }

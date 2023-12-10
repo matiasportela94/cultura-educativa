@@ -2,9 +2,219 @@ $verde: #8FC88A;
 $negro: #000000;
 $blanco: #FFFFFF;
 
+$telefono:"580px";
+$tablet:"1280px";
 
 .footer{
-    height: 40vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     background-color: $negro;
+    display: flex;
+    flex-direction: row;
+
+    .contacto {
+        width: 60%;
+        padding: 10vh 10vw;
+
+        .text {
+            h4 {
+                color: $verde;
+                font-weight: 700;
+            }
+
+            p {
+                color: $blanco;
+                font-size: 22px;
+            }
+        }
+
+        .links {
+
+            .link {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                
+                .iconoContainer {
+                    color: $blanco;
+                    border: 3px solid $blanco;
+                    border-radius: 50%;
+                    margin: 2vh 0;
+                    height: 50px;
+                    width: 50px;
+                    min-width: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    .icono {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 25px;
+                    }
+    
+                }          
+
+                .infoContainer {
+                    margin: 2vh 1vw;
+                    height: 50px;
+                    width: auto;
+                    display: flex;
+                    align-items: center;
+                    border: 3px solid $blanco;
+                    border-radius: 30px;
+                    width: 80%;
+                    min-width: 320px;
+
+
+                    .contactoInfo {
+                        color: $blanco;
+                        font-size: 16px;
+                        margin: 0 2vw;
+
+
+                        p {
+                            margin: 0;
+                            font-weight: 700;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+
+            .link:hover {
+                .iconoContainer {
+                    color: $negro;
+                    border: 3px solid $verde;
+                    background-color: $verde;
+                }
+
+                .infoContainer {
+                    background-color: $verde;
+                    color: $negro;
+                    border: 3px solid $verde;    
+
+                    .contactoInfo {
+                        color: $negro;
+                    }
+                }
+            }
+
+        }
+        
+    }
+    
+    .linkIcons{
+        display: none;
+    }
+
+    .atencionAlCliente{
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-right: 15vw;
+
+        img{
+            height: 90%;
+            width: auto;
+        }
+    }
+
 }
+
+@media (min-width: $telefono) and (max-width: 800px) {
+    .footer{
+        .contacto {
+            width: 100%;
+    
+            .links {
+                width: 90%;
+            }
+        }
+
+        .atencionAlCliente{
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .footer{
+        .atencionAlCliente{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            padding-right: 0;
+    
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $telefono) {
+    .footer{
+        height: auto;
+        flex-direction: column;
+    
+        .contacto {
+            width: 100%;
+            padding: 10vh 10vw 0vh 10vw;
+    
+            .links {
+                display: none;
+    
+                .link {  
+                    .infoContainer {
+                        .contactoInfo {
+                            font-size: 16px;
+                            max-width: 320px;
+                        }
+                    }
+                }    
+            }
+
+        }
+        
+        .linkIcons{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+
+            .circulo{
+                background-color: $verde;
+                border-radius: 50%;
+                min-width: 75px;
+                min-height: 75px;
+                width: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 75px;
+
+                img{
+                    width: 3em;
+                }
+            }
+        }
+    
+        .atencionAlCliente{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-right: 0;
+    
+            img{
+                width: 70%;
+            }
+        }
+    
+    }
+    
+}
+
