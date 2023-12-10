@@ -19,6 +19,7 @@ export class FooterComponent implements OnInit {
   emailCopiedToClipboardMessage:string = "Email copiado al portapapeles!";
   phoneCopiedToClipboardMessage:string = "Telefono copiado al portapapeles!";
   copiedToClipboardAction:string = "Cerrar";
+  durationInSeconds = 5;
 
   constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
 
@@ -34,7 +35,10 @@ export class FooterComponent implements OnInit {
   }
 
   showCopyToClipboardSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
+    this._snackBar.open(message, action, {
+      panelClass: "success-dialog",
+      duration: this.durationInSeconds * 1000
+    });
   }
 
   openSnackBar(message: string, action: string) {
