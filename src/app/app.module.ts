@@ -12,6 +12,7 @@ import { DiplomaturaComponent } from './landing/diplomatura/diplomatura.componen
 import { ActualizacionesComponent } from './landing/actualizaciones/actualizaciones.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    ClipboardModule
+    ClipboardModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
