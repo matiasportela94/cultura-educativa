@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clipboard } from '@angular/cdk/clipboard';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'footer',
@@ -15,7 +16,11 @@ export class FooterComponent implements OnInit {
   phoneNumber:string = "+5492235988854";
   contactMail:string = "ce.culturaeducativa@gmail.com";
 
-  constructor(private clipboard: Clipboard) { }
+  emailCopiedToClipboardMessage:string = "Email copiado al portapapeles!";
+  phoneCopiedToClipboardMessage:string = "Telefono copiado al portapapeles!";
+  copiedToClipboardAction:string = "Cerrar";
+
+  constructor(private clipboard: Clipboard, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -28,4 +33,13 @@ export class FooterComponent implements OnInit {
     return this.contactMail;
   }
 
+  showCopyToClipboardSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
+  }
+
 }
+

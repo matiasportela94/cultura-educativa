@@ -27,10 +27,10 @@
         </div>
     </div>
     <div class="linkIcons">
-        <div class="phone circulo">
+        <div class="phone circulo" (click)="showCopyToClipboardSnackBar(emailCopiedToClipboardMessage, copiedToClipboardAction)">
             <img src="{{phoneIconPath}}" [cdkCopyToClipboard]="getPhoneNumber()">
         </div>
-        <div class="mail circulo">
+        <div class="mail circulo" (click)="showCopyToClipboardSnackBar(phoneCopiedToClipboardMessage, copiedToClipboardAction)">
             <img src="{{mailIconPath}}" [cdkCopyToClipboard]="getContactMail()">
         </div>
     </div>
