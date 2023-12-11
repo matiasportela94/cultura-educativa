@@ -2,8 +2,708 @@ $verde: #8FC88A;
 $negro: #000000;
 $blanco: #F3F3F3;
 
-.diplomatura{
-    background-color: $blanco;
-    height: 100vh;
+$tablet:"1120px";
+$smallTablet:"930px";
+$phone:"620px";
+
+.diplomaturaContainer {
     width: 100%;
+    height: auto;
+
+    .diplomaturaHeader{
+        background-color: $blanco;
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        background-image: url('/assets/images/textura.jpg');
+        background-repeat: no-repeat;
+        background-position: center; 
+    
+    
+        .diplomaturaTextContainer{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 15vw;
+            width: 40%;
+
+            .certificadasText{
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                h1{
+                    font-size: 56px;
+
+                    span{
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .certificadasBox {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                flex-direction: row;
+
+                .certificateIcon {
+                    img{
+                        width: 75px;
+                        height: auto;
+                    }
+                }
+
+                .certificateText{
+                    p {
+                        margin: 0;
+                        font-weight: 500;
+                        padding-left: 1vw;
+                    }
+                }
+            }
+        }
+    
+        .diplomaturaIconContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+    
+            img{
+                height: 80%;
+                width: auto;
+            }
+        }
+    }
+
+    .diplomaturaInformation{
+        height: 85vh;
+        width: 100%;
+        background-color: $verde;
+        display: flex;
+        flex-direction: row;
+        
+        .diplomaturaInfoContainer {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15vh 10vw;
+
+            .textContainer {
+                width: 90%;
+
+                h1 {
+                    color: $negro;
+                    font-weight: 700;
+                    font-size: 32px;
+                }
+
+                
+            }
+        }
+
+        .diplomaturaMapaContainer {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            .mapa{
+                width: 50%;
+            }
+
+            .puntos{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+
+                .titleBadge {
+                    width: 150px;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $blanco;
+                    color: $negro;
+                    
+                    border: $blanco solid 3px;
+                    border-radius: 30px;
+
+                    p { 
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+
+                .badge{
+                    margin: 1vh 0;
+
+                    .mat-badge-content{
+                        background : $blanco;
+                        color: $negro;
+                        width: auto;
+                        display: grid;
+                        width: 52px;
+                        height: 20px;
+                        border-radius: 30px;
+                        text-align: center;
+                        align-items: center;
+                    }
+                }
+
+                .cityBadge {
+                    width: 150px;
+                    height: 5vh;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    background-color: $negro;
+                    color: $blanco;
+                    
+                    border: $negro solid 3px;
+                    border-radius: 30px;
+
+                    .number{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $verde;
+                        color: $blanco;
+                        min-width: 30px;
+                        min-height: 30px;
+                        
+                        border: $negro solid 3px;
+                        border-radius: 50%;
+
+                        span{
+                            font-weight: 500;
+                        }
+                    }
+
+                    
+                    p { 
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 500;
+                        padding-left: 10px;
+                    }
+                }
+
+            }
+        }
+        
+
+    }
+
+    .diplomatura {
+        height: 100%;
+        width: 100%;
+        background-color: $blanco;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+
+        .diplomatura-header {
+            width: 90%;
+            height: 15vh;
+            background-color: $negro;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            
+            .diplomatura-title{
+                width: 98%;
+                height: 12vh;
+                background-color: $verde;
+                padding-right: 5vw;
+                border-radius: 20px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                
+                .certificado {
+                    width: 5vw;
+
+                    img {
+                        width: 10vw;
+                        position: relative;
+                        top: 50px;
+                    }
+                }
+            }
+        }
+    
+        .content{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+
+            .contentInfo {
+                width: 50%;
+                padding: 15vh 0 10vh 15vw;
+
+                h4{
+                    color: $verde;
+                    font-weight: 500;
+                }
+
+                .list {
+                    .list-item {
+                        padding-top: 1vh;
+
+                        .list-title {
+                            font-weight: 500;
+                        }
+    
+                    }
+                }
+            }
+
+            .contentDetails{
+                width: 50%;
+                
+                .onlineContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 15vh;
+                    padding-right: 10vw;
+                    width: 100%;
+
+                    img{
+                        width: 60%;
+                    }
+
+                    h5 {
+                        height: 5vh;
+                        background-color: $negro;
+                        color:$blanco;
+                        border-radius: 30px;
+                        padding: 1vh 2vw;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                }
+                
+            }
+        }
+
+        .moreContent {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5vh;
+
+            .moreContentInfo {
+                width: 70%;
+
+                h5 {
+                    padding-bottom: 5vh;
+                }
+            }
+        }
+
+    }   
+
 }
+
+@media (max-width: $tablet){
+    .diplomaturaContainer {
+    
+        .diplomaturaHeader{
+        
+            .diplomaturaTextContainer{
+             
+                .certificadasText{
+                    h1{
+                        font-size: 48px;
+                    }
+                }
+    
+                .certificadasBox {
+    
+                    .certificateText{
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        
+            .diplomaturaIconContainer{
+                img{
+                    width: 70%;
+                }
+            }
+        }
+    
+        .diplomatura {
+            height: 100%;
+            width: 100%;
+            background-color: $blanco;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10vh;
+    
+            .diplomatura-header {
+                width: 90%;
+                height: 15vh;
+                background-color: $negro;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+                
+                .diplomatura-title{
+                    width: 98%;
+                    height: 12vh;
+                    background-color: $verde;
+                    padding-right: 5vw;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    
+                    .certificado {
+                        width: 5vw;
+    
+                        img {
+                            width: 10vw;
+                            position: relative;
+                            top: 50px;
+                        }
+                    }
+                }
+            }
+        
+            .content{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+                height: 100%;
+    
+                .contentInfo {
+                    width: 50%;
+                    padding: 15vh 0 10vh 15vw;
+    
+                    h4{
+                        color: $verde;
+                        font-weight: 500;
+                    }
+    
+                    .list {
+                        .list-item {
+                            padding-top: 1vh;
+    
+                            .list-title {
+                                font-weight: 500;
+                            }
+        
+                        }
+                    }
+                }
+    
+                .contentDetails{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+                    
+                    .onlineContainer {
+                        height: 100%;
+                        width: 100%;
+                        margin-top: 10vh;
+    
+                        img{
+                            width: 60%;
+                        }
+    
+                        h5 {
+                            height: 5vh;
+                            background-color: $negro;
+                            color:$blanco;
+                            border-radius: 30px;
+                            padding: 1vh 2vw;
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                    }
+                    
+                }
+            }
+    
+            .moreContent {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 5vh;
+    
+                .moreContentInfo {
+                    width: 70%;
+    
+                    h5 {
+                        padding-bottom: 5vh;
+                    }
+                }
+            }
+    
+        }   
+    
+    }
+    
+}
+
+@media (max-width: $smallTablet){   
+    .diplomaturaContainer {
+    
+        .diplomaturaHeader{
+            .diplomaturaTextContainer{
+    
+                .certificadasText{    
+                    h1{
+                        font-size: 36px;
+                    }
+                }
+    
+                .certificadasBox {
+                    .certificateText{
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        
+        }
+    
+        .diplomaturaInformation{
+            
+            .diplomaturaInfoContainer {
+                flex-direction: column;
+                padding: 15vh 10vw;
+            }
+    
+            .diplomaturaMapaContainer {
+                width: 40%;
+                
+                .mapa{
+                    display: none;
+                }
+    
+                .puntos{
+                    width: 100%;
+                    display: flex;
+                }
+            }
+            
+    
+        }
+    
+        .diplomatura {
+    
+            .diplomatura-header {
+                
+                .diplomatura-title{
+
+                    h4 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        
+            .content{
+                width: 100%;
+                flex-direction: column;
+    
+                .contentInfo {
+                    width: 100%;
+                    padding-left: 15vw;
+                    padding-top: 10vh;
+                    padding-bottom: 2vh;
+                }
+                
+                .contentDetails{
+                    width: 100%;
+                    
+                    .onlineContainer {
+                        padding-right: 10vw;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        padding-bottom: 5vh;
+    
+                        img{
+                            width: 40%;
+                        }
+    
+                    }
+                    
+                }
+            }
+    
+            .moreContent {
+                .moreContentInfo {
+    
+                    h5 {
+                        font-size: 16px;
+                        padding-bottom: 3vh;
+                    }
+                }
+            }
+    
+        }   
+    
+    }
+    
+}
+
+@media (max-width: $phone){   
+    .diplomaturaContainer {
+    
+        .diplomaturaHeader{
+            flex-direction: column;
+
+            .diplomaturaTextContainer{
+                padding-top: 15vh;
+                width: 100%;
+                height: 40%;
+    
+                .certificadasText{    
+                    h1{
+                        font-size: 36px;
+                    }
+                }
+    
+                .certificadasBox {
+                    height: auto;
+                }
+            }
+
+            .diplomaturaIconContainer{
+                width: 100%;
+                height: 60%;
+
+                img{
+                    width: 90%;
+                }
+                
+            }
+        
+        }
+    
+        .diplomaturaInformation{
+            flex-direction: column;
+            height: 100%;
+            padding-bottom: 10vh;
+            
+            .diplomaturaInfoContainer {
+                width: 100%;
+                flex-direction: column;
+                padding: 15vh 10vw 5vh 10vw;
+            }
+    
+            .diplomaturaMapaContainer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                                
+                .mapa{
+                    display: none;
+                }
+    
+                .puntos{
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                }
+            }
+            
+    
+        }
+    
+        .diplomatura {
+
+            .diplomatura-header {
+                border-radius: 20px;
+                .diplomatura-title{
+                border-radius: 15px;
+                width: 96%;
+                   
+                    .certificado {
+    
+                        img {
+                            width: 25vw;
+                            top: 55px;
+                        }
+                    }
+                    
+                    h4 {
+                        font-size: 14px;
+                    }
+
+                }
+
+            }
+        
+            .content{
+
+                .contentInfo {
+                    width: 100%;
+                    padding-left: 10vw;
+                    padding-top: 10vh;
+                    padding-bottom: 2vh;
+                    padding-right: 10vw;
+                }
+                
+                .contentDetails{
+                    
+                    .onlineContainer {
+    
+                        img{
+                            width: 60%;
+                        }
+
+                        h5{
+                            font-size: 16px;
+                        }
+    
+                    }
+                    
+                }
+            }
+    
+            .moreContent {
+                .moreContentInfo {
+    
+                    h5 {
+                        font-size: 16px;
+                        padding-bottom: 3vh;
+                    }
+                }
+            }
+    
+        }   
+    
+    }
+    
+}
+
+
