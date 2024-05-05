@@ -217,7 +217,17 @@ $phone:"620px";
             border-radius: 30px;
             display: flex;
             justify-content: center;
-            align-items: center;    
+            align-items: center;  
+            
+            .certificado {
+                width: 0;
+
+                img {
+                    width: 10vw;
+                    position: relative;
+                    top: 50px;
+                }
+            }
             
             .diplomatura-title{
                 width: 98%;
@@ -228,16 +238,8 @@ $phone:"620px";
                 text-align: center;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 
-                .certificado {
-                    width: 5vw;
-
-                    img {
-                        width: 10vw;
-                        position: relative;
-                        top: 50px;
-                    }
-                }
             }
         }
     
@@ -365,7 +367,15 @@ $phone:"620px";
                 border-radius: 30px;
                 display: flex;
                 justify-content: center;
-                align-items: center;    
+                align-items: center; 
+                
+                .certificado {
+                    img {
+                        width: 10vw;
+                        position: relative;
+                        top: 50px;
+                    }
+                }
                 
                 .diplomatura-title{
                     width: 98%;
@@ -376,16 +386,6 @@ $phone:"620px";
                     text-align: center;
                     display: flex;
                     align-items: center;
-                    
-                    .certificado {
-                        width: 5vw;
-    
-                        img {
-                            width: 10vw;
-                            position: relative;
-                            top: 50px;
-                        }
-                    }
                 }
             }
         
@@ -643,17 +643,17 @@ $phone:"620px";
 
             .diplomatura-header {
                 border-radius: 20px;
-                .diplomatura-title{
-                border-radius: 15px;
-                width: 96%;
-                   
-                    .certificado {
-    
-                        img {
-                            width: 25vw;
-                            top: 55px;
-                        }
+                
+                .certificado {
+                    img {
+                        width: 25vw;
+                        top: 55px;
                     }
+                }
+
+                .diplomatura-title{
+                    border-radius: 15px;
+                    width: 96%;
                     
                     h4 {
                         font-size: 14px;
@@ -705,5 +705,3 @@ $phone:"620px";
     }
     
 }
-
-
