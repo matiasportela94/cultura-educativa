@@ -231,105 +231,125 @@ $phone:"620px";
 
     }
 
-    .actualizacion {
-        height: 100%;
-        width: 100%;
+    .actualizaciones {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        padding-bottom: 15vh;
         background-color: $blanco;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10vh 0;
 
-        .actualizacion-header {
-            width: 90%;
-            height: 15vh;
-            background-color: $negro;
-            border-radius: 30px;
+        .actualizacion {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10vh 0 0 0;
+
+            .actualizacion-header {
+                width: 85%;
+                height: 15vh;
+                background-color: $negro;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+                font-size: 12px;
+
+                .certificado {
+                    width: 0;
+
+                    img {
+                        width: 10vw;
+                        position: relative;
+                        top: 95px;
+                    }
+
+                    .badge-number{
+                        position: relative;
+                        color: white;
+                        font-weight: 700;
+                        font-size: 24px;
+                        top: -40px;
+                        left: 70px;
+                    }
+                
+                }
+                
+                .actualizacion-title{
+                    width: 98%;
+                    height: 12vh;
+                    background-color: $verde;
+                    border-radius: 20px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h5{
+                        width: 95%;
+                    }
+                }
+            }
+        
+            .content{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                width: 100%;
+
+                .contentInfo {
+                    padding: 5vh 5vw 0 15vw;
+
+                    h4{
+                        color: $verde;
+                        font-weight: 500;
+                    }
+
+                    .list {
+                        .list-item {
+                            padding-top: 1vh;
+
+                            .list-title {
+                                font-weight: 500;
+                            }
+        
+                        }
+                    }
+                }
+            }
+        }   
+
+        .contentDetails{
             display: flex;
             justify-content: center;
-            align-items: center;    
-            
-            .certificado {
-                width: 0;
 
-                img {
-                    width: 10vw;
-                    position: relative;
-                    top: 50px;
-                }
-            }
-            
-            .actualizacion-title{
-                width: 98%;
-                height: 12vh;
-                background-color: $verde;
-                padding-right: 5vw;
-                border-radius: 20px;
-                text-align: center;
+
+            .onlineContainer {
                 display: flex;
-                align-items: center;
+                flex-direction: column;
                 justify-content: center;
-            }
-        }
-    
-        .content{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            width: 100%;
+                align-items: center;
+                width: 90%;
+                height: auto;
+                padding-top: 10vh;
 
-            .contentInfo {
-                width: 50%;
-                padding: 15vh 0 10vh 15vw;
-
-                h4{
-                    color: $verde;
-                    font-weight: 500;
+                img{
+                    width: 60%;
                 }
 
-                .list {
-                    .list-item {
-                        padding-top: 1vh;
-
-                        .list-title {
-                            font-weight: 500;
-                        }
-    
-                    }
-                }
-            }
-
-            .contentDetails{
-                width: 50%;
-                
-                .onlineContainer {
+                h5 {
+                    height: 5vh;
+                    background-color: $negro;
+                    color:$blanco;
+                    border-radius: 30px;
+                    padding: 1vh 2vw;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                    padding-top: 15vh;
-                    padding-right: 10vw;
-                    width: 100%;
-
-                    img{
-                        width: 60%;
-                    }
-
-                    h5 {
-                        height: 5vh;
-                        background-color: $negro;
-                        color:$blanco;
-                        border-radius: 30px;
-                        padding: 1vh 2vw;
-                        display: flex;
-                        align-items: center;
-                    }
-
                 }
-                
-            }
-        }
 
+            }
+            
+        }
     }   
 
 }

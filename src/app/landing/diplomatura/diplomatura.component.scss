@@ -225,8 +225,18 @@ $phone:"620px";
                 img {
                     width: 10vw;
                     position: relative;
-                    top: 50px;
+                    top: 85px;
                 }
+
+                .badge-number{
+                    position: relative;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 24px;
+                    top: -50px;
+                    left: 70px;
+                }
+               
             }
             
             .diplomatura-title{
